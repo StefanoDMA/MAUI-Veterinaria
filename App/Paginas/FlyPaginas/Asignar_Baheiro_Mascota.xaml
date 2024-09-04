@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FrontEndHealthPets.Paginas.FlyPaginas.Asignar_Baheiro_Mascota"
+             Title="Asignar_Baheiro_Mascota">
+    <ScrollView>
+        <VerticalStackLayout>
+            <!-- Picker to select a pet -->
+            <Picker x:Name="MascotaPicker"
+             Title="Seleccione una mascota"
+             ItemsSource="{Binding Mascotas}"
+             ItemDisplayBinding="{Binding Nombre}"
+             SelectedIndexChanged="MascotaPicker_SelectedIndexChanged" />
+
+            <!-- VerticalStackLayout for displaying pet details -->
+            <VerticalStackLayout>
+                <HorizontalStackLayout Spacing="10">
+                    <Label Text="Especie:" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start" />
+                    <Label x:Name="EspecieLabel" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="10">
+                    <Label Text="Raza:" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start" />
+                    <Label x:Name="RazaLabel" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <BoxView HeightRequest="2" Color="Gray" Margin="0,20,0,0"/>
+
+            <!-- Picker to select a tipo baheiro -->
+            <Picker x:Name="BaheiroPicker"
+                    SelectedIndexChanged="BaheiroPicker_SelectedIndexChanged"
+                    Title="Seleccione un tipo de baño"
+                    ItemsSource="{Binding Baheiro}"
+                    ItemDisplayBinding="{Binding TipoDe_Baheiro}" />
+
+            <!-- VerticalStackLayout for displaying medication details -->
+            <VerticalStackLayout>
+
+                <HorizontalStackLayout Spacing="10">
+                    <Label Text="Descripción:" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start" />
+                    <Label x:Name="DescripcionLabel" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+                </HorizontalStackLayout>
+
+            </VerticalStackLayout>
+
+            <BoxView HeightRequest="2" Color="Gray" Margin="0,20,0,0"/>
+
+            <!-- Fecha y Hora de Baño -->
+            <Label Text="Fecha y Hora del Baño"
+               FontSize="Medium"
+               Margin="0,10,0,0" />
+            <DatePicker x:Name="DatePickerBaño"
+                    Margin="0,0,0,10" />
+            <TimePicker x:Name="TimePickerBaño"
+                    Time="12:00" />
+
+            <!-- Fecha y Hora del Próximo Baño -->
+            <Label Text="Fecha y Hora del Próximo Baño"
+               FontSize="Medium"
+               Margin="0,10,0,0" />
+            <DatePicker x:Name="DatePickerProximoBaño"
+                    Margin="0,0,0,10" />
+            <TimePicker x:Name="TimePickerProximoBaño"
+                    Time="12:00" />
+
+            <!-- Notas Adicionales -->
+            <Label Text="Notas adicionales"
+               FontSize="Medium"
+               Margin="0,10,0,0" />
+            <Editor x:Name="EditorNotas"
+                Placeholder="Escriba aquí"
+                AutoSize="TextChanges"
+                HeightRequest="100"
+                Margin="0,0,0,20" />
+
+
+
+            <!-- Botón Guardar -->
+            <Button 
+                    x:Name="BtGUardar"
+                    Text="Guardar"
+                    BackgroundColor="purple"
+                    TextColor="White"
+                    FontSize="Medium"
+                    CornerRadius="20"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="End"
+                    Margin="0,20,0,0"
+                    Clicked="BtGUardar_Clicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FrontEndHealthPets.Paginas.IngresarMascotas"
+             Title="IngresarMascotas">
+    <ScrollView>
+        <Frame BackgroundColor="White" BorderColor="Purple">
+            <ScrollView>
+                <VerticalStackLayout Spacing="20">
+                    <VerticalStackLayout Padding="10,20" Spacing="10">
+                        <Grid BackgroundColor="#f8fafb">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Frame WidthRequest="80" HeightRequest="80" CornerRadius="40" BackgroundColor="White" BorderColor="Purple" HorizontalOptions="Start" VerticalOptions="Center" Grid.Row="0" Grid.Column="0">
+                                <Image x:Name="imgPerfil" Source="default_profile.png" Aspect="AspectFill" />
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                </Frame.GestureRecognizers>
+                            </Frame>
+                            <Label Text="Registro de Mascota" TextColor="Black" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,-20,0" />
+                            <Button Text="X" FontSize="Small" BackgroundColor="Purple" TextColor="White" BorderColor="Black" HorizontalOptions="End" VerticalOptions="Center" Grid.Row="0" Grid.Column="1" Margin="5" Padding="5,0" Clicked="Button_Clicked" />
+                            <!-- Resto del contenido -->
+                        </Grid>
+                        <!-- Usa un Grid con RowDefinitions para apilar las entradas -->
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Frame BackgroundColor="White" BorderColor="Purple" Grid.Row="0">
+                                <Grid>
+                                    <Entry x:Name="Nombre" Placeholder="Nombre" Text="" TextColor="Black" VerticalOptions="Center" MaxLength="15"/>
+                                </Grid>
+                            </Frame>
+                            <Frame BackgroundColor="White" BorderColor="Purple" Grid.Row="1">
+                                <Grid>
+                                    <Entry x:Name="Especie" Placeholder="Especie" Text="" TextColor="Black" VerticalOptions="Center" MaxLength="15"/>
+                                </Grid>
+                            </Frame>
+                            <Frame BackgroundColor="White" BorderColor="Purple" Grid.Row="2">
+                                <Grid>
+                                    <Entry x:Name="Raza" Placeholder="Raza" Text="" TextColor="Black" VerticalOptions="Center" MaxLength="15"/>
+                                </Grid>
+                            </Frame>
+                            <Frame BackgroundColor="White" BorderColor="Purple" Grid.Row="3">
+                                <Grid>
+                                    <!-- Reemplaza Entry con DatePicker -->
+                                    <VerticalStackLayout Padding="10" Spacing="10">
+                                        <Label Text="Fecha de Nacimiento:" TextColor="Black" VerticalOptions="Center" />
+                                        <DatePicker x:Name="Fecha_Nacimiento"
+                                                    Format="dd/MM/yyyy"
+                                                    TextColor="Black"
+                                                     VerticalOptions="Center" />
+                                    </VerticalStackLayout>
+                                </Grid>
+                            </Frame>
+                        </Grid>
+                        <Button Margin="0,20,0,0"
+                            x:Name="btRegistrar"
+                            BackgroundColor="Purple"
+                            BorderColor="White"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            FontSize="Medium"
+                            Text="Registrarse"
+                            Clicked="btRegistrar_Clicked" />
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+            </ScrollView>
+        </Frame>
+    </ScrollView>
+
+</ContentPage>

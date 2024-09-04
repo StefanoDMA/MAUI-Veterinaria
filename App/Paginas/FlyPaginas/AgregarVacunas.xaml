@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FrontEndHealthPets.Paginas.FlyPaginas.AgregarVacunas"
+             Title="AgregarVacunas">
+    <ScrollView>
+        <Grid Padding="20"
+          RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,*,Auto"
+          ColumnDefinitions="Auto,*">
+
+            <!-- Campo para el nombre del medicamento -->
+            <Label Text="Nombre de la Vacuna"
+               Grid.Row="0"
+               Grid.Column="0"
+               VerticalOptions="Center"
+               FontSize="Medium" />
+            <Entry x:Name="NombreVacuna"
+               Grid.Row="0"
+               Grid.Column="1"
+               Placeholder="Ingrese el nombre"
+               FontSize="Medium" />
+
+            <!-- Campo para la descripción del medicamento -->
+            <Label Text="Descripción"
+               Grid.Row="1"
+               Grid.Column="0"
+               VerticalOptions="Start"
+               FontSize="Medium"
+               Margin="0,10,0,0" />
+            <Editor x:Name="DescripcionVacuna"
+                Grid.Row="1"
+                Grid.Column="1"
+                Placeholder="Ingrese la descripción"
+                FontSize="Medium"
+                HeightRequest="100" />
+
+            <!-- Campo para la fecha de vencimiento del medicamento -->
+            <Label Text="Fecha de Vencimiento"
+               Grid.Row="2"
+               Grid.Column="0"
+               VerticalOptions="Center"
+               FontSize="Medium"
+               Margin="0,10,0,0" />
+
+            <DatePicker x:Name="FechaVencimiento"
+                    Grid.Row="2"
+                    Grid.Column="1" />
+
+            <TimePicker x:Name="TimeFechaVencimiento"
+                    Grid.Row="3"
+                    Grid.Column="1" />
+
+            <!-- Espaciador para la separación -->
+            <BoxView Grid.Row="4"
+                 Grid.Column="0"
+                 Grid.ColumnSpan="2"
+                 BackgroundColor="Purple"
+                 HeightRequest="20" />
+
+            <!-- Botón para guardar -->
+            <Button x:Name="BtVacuna"
+                Text="Guardar Medicamento"
+                Grid.Row="5"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                FontSize="Medium"
+                BackgroundColor="Purple"
+                TextColor="White"
+                Margin="0,20,0,0"
+                HorizontalOptions="Fill"
+                Clicked="BtVacuna_Clicked" />
+        </Grid>
+    </ScrollView>
+</ContentPage>

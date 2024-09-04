@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FlyoutPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FrontEndHealthPets.Paginas.PagFlyPrincipal"
+             xmlns:local="clr-namespace:FrontEndHealthPets.Paginas.FlyPaginas"
+             xmlns:loca2="clr-namespace:FrontEndHealthPets.Paginas"
+             Title="PagFly">
+
+    <FlyoutPage.Flyout>
+        <loca2:PaginaFlyMenu x:Name="flyoutPage" />
+    </FlyoutPage.Flyout>
+
+    <FlyoutPage.Detail>
+        <NavigationPage BarBackgroundColor="#128ba7" BarTextColor="White">
+            <x:Arguments>
+                <local:RazasAnimales/>
+            </x:Arguments>
+        </NavigationPage>
+    </FlyoutPage.Detail>
+
+</FlyoutPage>

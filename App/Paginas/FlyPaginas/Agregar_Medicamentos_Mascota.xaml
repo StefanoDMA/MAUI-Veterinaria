@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FrontEndHealthPets.Paginas.FlyPaginas.Agregar_Medicamentos_Mascota"
+             Title="Agregar_Medicamentos_Mascota">
+    <ScrollView>
+        <VerticalStackLayout>
+            <!-- Picker to select a pet -->
+            <Picker x:Name="MascotaPicker"
+                Title="Seleccione una mascota"
+                ItemsSource="{Binding Mascotas}"
+                ItemDisplayBinding="{Binding Nombre}"
+                SelectedIndexChanged="MascotaPicker_SelectedIndexChanged" />
+
+            <!-- VerticalStackLayout for displaying pet details -->
+            <VerticalStackLayout>
+                <HorizontalStackLayout Spacing="10">
+                    <Label Text="Especie:" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start" />
+                    <Label x:Name="EspecieLabel" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="10">
+                    <Label Text="Raza:" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start" />
+                    <Label x:Name="RazaLabel" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <BoxView HeightRequest="2" Color="Gray" Margin="0,20,0,0"/>
+
+            <!-- Picker to select a medication -->
+            <Picker x:Name="MedicamentoPicker"
+                SelectedIndexChanged="MedicamentoPicker_SelectedIndexChanged"
+                Title="Seleccione un medicamento"
+                ItemsSource="{Binding Medicamentos}"
+                ItemDisplayBinding="{Binding Nombre}" />
+
+            <!-- VerticalStackLayout for displaying medication details -->
+            <VerticalStackLayout>
+                <HorizontalStackLayout Spacing="10">
+                    <Label Text="Categoría:" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start" />
+                    <Label x:Name="CategoriaLabel" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="10">
+                    <Label Text="Descripción:" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start" />
+                    <Label x:Name="DescripcionLabel" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="10">
+                    <Label Text="Fecha de Vencimiento:" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start" />
+                    <Label x:Name="FechaDeVencimientoLabel" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+
+        <BoxView HeightRequest="2" Color="Gray" Margin="0,20,0,0"/>
+
+            <!-- Picker for Administration Mode -->
+            <Label Text="Modo de Administración:" FontAttributes="Bold" />
+            <Picker x:Name="ModoDeAdministracionPicker" Title="Seleccione el modo de administración">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Oral</x:String>
+                        <x:String>Intravenosa</x:String>
+                        <x:String>Inhalación</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <!-- Entry for Hour of Ingestion -->
+            <Label Text="Hora de Ingesta:" FontAttributes="Bold" />
+            <TimePicker x:Name="HoraDeIngestaTimePicker" Time="12:00:00" />
+
+            <!-- DatePicker for Start Date -->
+            <Label Text="Fecha de Inicio:" FontAttributes="Bold" />
+            <DatePicker x:Name="FechaDeInicioDatePicker" />
+
+            <!-- DatePicker for End Date -->
+            <Label Text="Fecha de Fin:" FontAttributes="Bold" />
+            <DatePicker x:Name="FechaDeFinDatePicker" />
+
+            <!-- Editor for Notes -->
+            <Label Text="Notas:" FontAttributes="Bold" />
+            <Editor x:Name="NotasEditor" Placeholder="Ingrese notas" AutoSize="TextChanges" />
+
+            <!-- Button to Add Medication -->
+            <Button x:Name="BtaplicarMedicamento" Text="Agregar medicamento Aplicar" Clicked="BtaplicarMedicamento_Clicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

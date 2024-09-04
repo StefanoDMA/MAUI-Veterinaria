@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FrontEndHealthPets.Paginas.FlyPaginas.perfilu"
+             Title="perfilu">
+    <ScrollView>
+        <Frame BackgroundColor="White" BorderColor="Purple">
+            <ScrollView>
+                <VerticalStackLayout Spacing="20">
+                    <VerticalStackLayout Padding="10,20" Spacing="10">
+                        <Grid BackgroundColor="#f8fafb">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Frame WidthRequest="80" HeightRequest="80" CornerRadius="40" BackgroundColor="White" BorderColor="Purple" HorizontalOptions="Start" VerticalOptions="Center" Grid.Row="0" Grid.Column="0">
+                                <Image x:Name="imgPerfil" Source="default_profile.png" Aspect="AspectFill" />
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                </Frame.GestureRecognizers>
+                            </Frame>
+                            <Label Text="Perfil Usuario" FontSize="Large" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,-20,0" />
+                            <Button Text="X" FontSize="Small" BackgroundColor="Purple" BorderColor="Black"  TextColor="White" HorizontalOptions="End" VerticalOptions="Center" Grid.Row="0" Grid.Column="1" Margin="5" Padding="5,0" />
+                            <!-- Resto del contenido -->
+                        </Grid>
+                        <!-- Usa un Grid con RowDefinitions para apilar las etiquetas -->
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <StackLayout Orientation="Vertical" Spacing="20" Padding="10">
+                                <StackLayout Orientation="Horizontal" Spacing="20" Padding="10">
+                                    <Label Text="Nombre" TextColor="Black" VerticalOptions="Center" />
+                                    <Label Text="{Binding Nombre}" TextColor="Black" VerticalOptions="Center" />
+                                    <Button x:Name="BtActualizarNombre" Text="Editar" TextColor="White" BackgroundColor="Purple" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Clicked="BtActualizarNombre_Clicked" />
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal" Spacing="20" Padding="10">
+                                    <Label Text="Apellido:" TextColor="Black" VerticalOptions="Center" />
+                                    <Label Text="{Binding Apellido}" TextColor="Black" VerticalOptions="Center" />
+                                    <Button x:Name="BtActualizarApeliido" Text="Editar" TextColor="White" BackgroundColor="Purple" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Clicked="BtActualizarApeliido_Clicked" />
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal" Spacing="20" Padding="10">
+                                    <Label Text="Correo Electrónico:" TextColor="Black" VerticalOptions="Center" />
+                                    <Label Text="{Binding CorreoElectronico}" TextColor="Black" VerticalOptions="Center" />
+                                    <Button x:Name="BtActualizarCooreo" Text="Editar" TextColor="White" BackgroundColor="Purple" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Clicked="BtActualizarCooreo_Clicked" />
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal" Spacing="20" Padding="10">
+                                    <Label Text="Contraseña:" TextColor="Black" VerticalOptions="Center" />
+                                    <Label Text="{Binding Password}" TextColor="Black" VerticalOptions="Center" />
+                                    <Button x:Name="BtActualizarPassword" Text="Editar" TextColor="White" BackgroundColor="Purple" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Clicked="BtActualizarPassword_Clicked" />
+                                </StackLayout>
+                            </StackLayout>
+                        </Grid>
+
+
+
+                        <StackLayout Padding="20">
+                            <Label Text="Ingrese el correo electrónico para eliminar el usuario:" TextColor="Black" />
+                            <Button x:Name="bteliminar" Text="Eliminar" Clicked="bteliminar_Clicked" BackgroundColor="Purple" TextColor="White" />
+                        </StackLayout>
+                        <Button 
+                                x:Name="Btcerrarsesion"
+                                Text="Cerrar Sesión" 
+                                BackgroundColor="Purple" 
+                               TextColor="White" 
+                                Clicked="Btcerrarsesion_Clicked" />
+
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+            </ScrollView>
+        </Frame>
+    </ScrollView>
+
+</ContentPage>

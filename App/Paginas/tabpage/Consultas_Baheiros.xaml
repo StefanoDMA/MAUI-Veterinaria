@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FrontEndHealthPets.Paginas.tabpage.Consultas_Baheiros">
+    
+    <ScrollView>
+    <VerticalStackLayout>
+        <Picker x:Name="MascotaPicker"
+            Title="Seleccione una mascota"
+            ItemsSource="{Binding Mascotas}"
+            ItemDisplayBinding="{Binding Nombre}"
+            SelectedIndexChanged="MascotaPicker_SelectedIndexChanged" />
+
+        <BoxView HeightRequest="2" Color="Gray" Margin="0,20,0,0" />
+
+        <!-- Encabezado -->
+        <Grid Padding="10" BackgroundColor="Purple" ColumnSpacing="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Tipo de Baño" 
+                   TextColor="White"
+               FontAttributes="Bold" 
+               Grid.Column="0" 
+               HorizontalOptions="Center" 
+               VerticalOptions="Center"/>
+
+            <Label Text="Descripcion" 
+                   TextColor="White"
+               FontAttributes="Bold" 
+               Grid.Column="1" 
+               HorizontalOptions="Center" 
+               VerticalOptions="Center"/>
+          
+
+            <Label Text="Fecha ultimo baño"
+                   TextColor="White"
+               FontAttributes="Bold" 
+               Grid.Column="2" 
+               HorizontalOptions="Center" 
+               VerticalOptions="Center"/>
+
+            <Label Text="Fecha proximo baño" 
+                   TextColor="White"
+               FontAttributes="Bold" 
+               Grid.Column="3" 
+               HorizontalOptions="Center" 
+               VerticalOptions="Center"/>
+
+            <Label Text="Notas" 
+                   TextColor="White"
+               FontAttributes="Bold" 
+               Grid.Column="4" 
+               HorizontalOptions="Center" 
+               VerticalOptions="Center"/>
+        </Grid>
+
+        <!-- Lista de Medicamentos -->
+            <ListView x:Name="BaheirosListView"
+              ItemsSource="{Binding BaheirosMascotas}"
+              HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10" ColumnSpacing="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                                <Label Text="{Binding Nombre_Baheiro}" 
+                               Grid.Column="0" 
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"/>
+
+                                <Label Text="{Binding Descripcion_Baheiro }" 
+                               Grid.Column="1" 
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"/>
+
+                                <Label Text="{Binding Fecha_y_hora_Baheiro, StringFormat='{0:dd/MM/yyyy}'}" 
+                               Grid.Column="2" 
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"/>
+
+                                <Label Text="{Binding Fecha_y_hora_proximo_Baheiro, StringFormat='{0:dd/MM/yyyy}'}" 
+                               Grid.Column="3" 
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"/>
+
+                                <Label Text="{Binding Notas, StringFormat='No hay notas disponibles'}" 
+                               Grid.Column="4" 
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"
+                               LineBreakMode="WordWrap"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:Name="BtGuardarLista"
+                Text="Guardar como Excel"
+                Clicked="BtGuardarLista_Clicked" />
+    </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

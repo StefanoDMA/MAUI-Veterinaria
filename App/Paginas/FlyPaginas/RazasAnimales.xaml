@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FrontEndHealthPets.Paginas.FlyPaginas.RazasAnimales"
+             Title="RazasAnimales">
+
+    <!-- Fondo de la página -->
+    <ContentPage.BackgroundImageSource>
+        <FileImageSource File="fondomascota3.jpeg" />
+    </ContentPage.BackgroundImageSource>
+
+    <Grid RowDefinitions="Auto,Auto,*,Auto" ColumnDefinitions="*,*">
+
+        <!-- Encabezado con imagen y texto -->
+        <VerticalStackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" 
+                             HorizontalOptions="Center" VerticalOptions="Start" Margin="10">
+            <Image Source="imagen_20240730.png" WidthRequest="50" HeightRequest="50" Margin="5"/>
+            <Label Text="¡Bienvenido(a)!" FontSize="25" Margin="5" TextColor="White"/>
+        </VerticalStackLayout>
+
+        <!-- Selector de raza y botón -->
+        <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" 
+                     Orientation="Vertical" Margin="10" VerticalOptions="Start">
+            <Label Text="Buscar por raza:" FontSize="18" Margin="5" TextColor="White"/>
+            <Picker x:Name="dogSelector" TextColor="White" WidthRequest="250" Margin="5"/>
+
+            <!-- Este es el botón buscarFotoButton -->
+            <Button x:Name="buscarFotoButton" Text="Buscar Fotos" 
+                    WidthRequest="200" HeightRequest="50" Margin="5"
+                    BackgroundColor="#128ba7" TextColor="White"
+                    Clicked="BtBuscar_Clicked" 
+                    HorizontalOptions="Center"/>
+
+            <!-- Este es el indicador de carga loadingIndicator -->
+            <ActivityIndicator x:Name="loadingIndicator" 
+                               IsRunning="False" 
+                               IsVisible="False" 
+                               Color="White" 
+                               HorizontalOptions="Center" />
+        </StackLayout>
+
+        <!-- Contenedor para mostrar imágenes -->
+        <ScrollView Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" VerticalOptions="FillAndExpand">
+            <StackLayout x:Name="apiStackLayout" Orientation="Vertical" Margin="10">
+                <!-- Imágenes dinámicas se agregarán aquí -->
+            </StackLayout>
+        </ScrollView>
+
+        <!-- Etiqueta para mensajes -->
+        <Label x:Name="messageLabel" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
+               TextColor="White" HorizontalOptions="Center" VerticalOptions="End" Margin="10"/>
+    </Grid>
+
+</ContentPage>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FrontEndHealthPets.Paginas.FlyPaginas.MisMascotas"
+             Title="Mis Mascotas">
+
+    <ContentPage.Resources>
+        <Style x:Key="HeaderStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="HorizontalOptions" Value="Center" />
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="Margin" Value="5,0" />
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="10" Spacing="20">
+            <Button Text="Agregar Nueva Mascota"
+                BackgroundColor="#128ba7"
+                TextColor="White"
+                Clicked="btNuevaMascota_Clicked"
+                HorizontalOptions="Center" />
+
+            <!-- Lista de Mascotas -->
+            <CollectionView x:Name="ListViewMascotas"
+                            ItemsSource="{Binding PerfilMascotas}"
+                            Margin="0,10,0,0">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BackgroundColor="#633760" BorderColor="LightGray" CornerRadius="10" Padding="10" Margin="10">
+                            <Grid Padding="10">
+                                <!-- Define las columnas del Grid -->
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <!-- Imagen -->
+                                    <ColumnDefinition Width="*" />
+                                    <!-- Información -->
+                                    <ColumnDefinition Width="Auto" />
+                                    <!-- Botón -->
+                                </Grid.ColumnDefinitions>
+
+                                <!-- Imagen de la mascota -->
+                                <Image Source="{Binding ImageSource}" WidthRequest="100" HeightRequest="100" Aspect="AspectFill" Grid.Column="0" VerticalOptions="Center" />
+
+                                <!-- Información de la mascota -->
+                                <Grid Grid.Column="1" ColumnSpacing="10" Padding="10,0,0,0">
+                                    <!-- Define las columnas del Grid para la información -->
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <!-- Columna de la izquierda (para Nombre y Fecha de Nacimiento) -->
+                                        <ColumnDefinition Width="*" />
+                                        <!-- Columna de la derecha (para Especie y Raza) -->
+                                    </Grid.ColumnDefinitions>
+
+                                    <!-- Nombre y Fecha de Nacimiento -->
+                                    <StackLayout Grid.Column="0" Spacing="3" VerticalOptions="Center" Margin="20,0,10,0">
+                                        <Label Text="Nombre:" FontAttributes="Bold" TextColor="White" />
+                                        <Label Text="{Binding Name}" FontSize="Small" TextColor="White" />
+
+                                        <Label Text="Fecha de Nacimiento:" FontAttributes="Bold" TextColor="White" />
+                                        <Label Text="{Binding Fecha_Nacimiento, StringFormat='{0:dd/MM/yyyy}'}" FontSize="Small" TextColor="White" />
+                                    </StackLayout>
+
+                                    <!-- Raza y Especie -->
+                                    <StackLayout Grid.Column="1" Spacing="3" VerticalOptions="Center" Margin="45,0,0,0">
+                                        <Label Text="Especie:" FontAttributes="Bold" TextColor="White" />
+                                        <Label Text="{Binding Especie}" FontSize="Small" TextColor="White" />
+                                        <Label Text="Raza:" FontAttributes="Bold" TextColor="White" />
+                                        <Label Text="{Binding Raza}" FontSize="Small" TextColor="White" />
+                                    </StackLayout>
+                                </Grid>
+
+                                <!-- Botón Ver Detalles -->
+                                <Button Text="Ver Detalles"
+                                        Command="{Binding Path=BindingContext.VerDetallesCommand, Source={x:Reference ListViewMascotas}}"
+                                        CommandParameter="{Binding .}"
+                                        BackgroundColor="#128ba7"
+                                        TextColor="White"
+                                        Grid.Column="2"
+                                        VerticalOptions="Center" />
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
+

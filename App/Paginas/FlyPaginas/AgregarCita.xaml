@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FrontEndHealthPets.Paginas.FlyPaginas.AgregarCita"
+             Title="Agregar Cita">
+    <ScrollView>
+        <StackLayout Padding="10">
+            
+            <Picker x:Name="pickerClinicas"
+                Title="Seleccione una clínica"
+                ItemsSource="{Binding listaClinicas}"
+                ItemDisplayBinding="{Binding Nombre_Clinica}"
+                SelectedIndexChanged="PickerClinicas_SelectedIndexChanged"/>
+
+            <VerticalStackLayout>
+                <HorizontalStackLayout Spacing="10">
+                    <Label Text="Direcion:" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start" />
+                    <Label x:Name="lblDireccionClinica" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="10">
+                    <Label Text="Telefono:" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start" />
+                    <Label x:Name="lblTelefonoClinica" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            
+            <Picker x:Name="pickerDoctores"
+                Title="Seleccione un doctor"
+                ItemsSource="{Binding listaDoctores}"
+                ItemDisplayBinding="{Binding Nombre}" 
+                SelectedIndexChanged="PickerDoctores_SelectedIndexChanged"/>
+
+            <VerticalStackLayout>
+                <HorizontalStackLayout Spacing="10">
+                    <Label Text="Correo:" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start" />
+                    <Label x:Name="lblCorreoDoctor" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="10">
+                    <Label Text="Telefono:" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start" />
+                    <Label x:Name="lblTelefonoDoctor" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+          
+            <Picker x:Name="MascotaPicker"
+                Title="Seleccione una mascota"
+                ItemsSource="{Binding Mascotas}"
+                ItemDisplayBinding="{Binding Nombre}" />
+
+            <Label Text="Fecha de Cita" />
+            <DatePicker x:Name="DatePickerCita" />
+
+            <Label Text="Hora de Cita" />
+            <TimePicker x:Name="TimePickerCita" />
+
+            <Label Text="Descripción" />
+            <Editor x:Name="descripcionEditor" />
+
+            <Label Text="Notas" />
+            <Editor x:Name="notasEditor" />
+
+            <Button Text="Agregar Cita" Clicked="BtCita_Clicked" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
+
+
+       

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="FrontEndHealthPets.Paginas.FlyPaginas.ClinicaVeterinaria"
+    Title="ClinicaVeterinaria">
+
+    <ContentPage.BackgroundImageSource>
+        <FileImageSource File="fondomascota2.jpg" />
+    </ContentPage.BackgroundImageSource>
+    
+    <Grid>
+
+        <!-- Contenido principal -->
+        <ScrollView>
+            <StackLayout Padding="20"
+                   VerticalOptions="CenterAndExpand"
+                   Spacing="10">
+                <!-- Espaciado entre los botones -->
+                <!-- Título -->
+                <Label Text="Citas"
+                 FontSize="Large"
+                 FontAttributes="Bold"
+                 HorizontalOptions="Center"
+                 TextColor="White" />
+
+                <Button 
+                 x:Name="BtGuardarCita"
+                 Text="Agregar nueva cita"
+                 BackgroundColor="#128ba7"
+                 TextColor="White"
+                 FontSize="Medium"
+                 CornerRadius="20"
+                 HorizontalOptions="Center"
+                 WidthRequest="200"
+                 Clicked="BtGuardarCita_Clicked"/>
+
+               
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>

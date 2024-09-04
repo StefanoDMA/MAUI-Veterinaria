@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FrontEndHealthPets.Paginas.FlyPaginas.Asignar_Mascota_Vacuna"
+             Title="Asignar_Mascota_Vacuna">
+    <ScrollView>
+        <VerticalStackLayout>
+            <!-- Picker to select a pet -->
+            <Picker x:Name="MascotaPicker"
+        Title="Seleccione una mascota"
+        ItemsSource="{Binding Mascotas}"
+        ItemDisplayBinding="{Binding Nombre}"
+        SelectedIndexChanged="MascotaPicker_SelectedIndexChanged" />
+
+            <!-- VerticalStackLayout for displaying pet details -->
+            <VerticalStackLayout>
+                <HorizontalStackLayout Spacing="10">
+                    <Label Text="Especie:" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start" />
+                    <Label x:Name="EspecieLabel" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="10">
+                    <Label Text="Raza:" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start" />
+                    <Label x:Name="RazaLabel" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <BoxView HeightRequest="2" Color="Gray" Margin="0,20,0,0"/>
+
+            <!-- Picker to select a medication -->
+            <Picker x:Name="vacunaMascotaPicker"
+        Title="Seleccione un medicamento"
+        ItemsSource="{Binding Vacunas}"
+        ItemDisplayBinding="{Binding Nombre}"
+        SelectedIndexChanged="vacunaMascotaPicker_SelectedIndexChanged" />
+
+            <!-- VerticalStackLayout for displaying medication details -->
+            <VerticalStackLayout>
+                
+                <HorizontalStackLayout Spacing="10">
+                    <Label Text="Descripción:" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start" />
+                    <Label x:Name="DescripcionLabel" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="10">
+                    <Label Text="Fecha de Vencimiento:" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start" />
+                    <Label x:Name="FechaDeVencimientoLabel" VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+
+            <BoxView HeightRequest="2" Color="Gray" Margin="0,20,0,0"/>
+
+            <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                <Label Text="Dosis:" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start" />
+                <Picker x:Name="DosisPicker"
+        Title="Seleccione la dosis">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>1</x:String>
+                            <x:String>2</x:String>
+                            <x:String>3</x:String>
+                            <x:String>4</x:String>
+                            <x:String>5</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+            </HorizontalStackLayout>
+
+            <Label      Text="Fecha y Hora de Aplicacion"
+                        FontSize="Medium"
+                        Margin="0,10,0,0" />
+            <DatePicker x:Name="DatePickerVacuna"
+                        Margin="0,0,0,10" />
+            <TimePicker x:Name="TimePickerVacuna"
+                        Time="12:00" />
+
+            <Label Text="Fecha y Hora de la Proxima Aplicacion"
+                   FontSize="Medium"
+                   Margin="0,10,0,0" />
+            <DatePicker x:Name="DatePickerProxiVacuna"
+                        Margin="0,0,0,10" />
+            <TimePicker x:Name="TimePickerProximaVacuna"
+                        Time="12:00" />
+
+            <Label Text="Comentarios adicionales"
+                   FontSize="Medium"
+                   Margin="0,10,0,0" />
+            <Editor x:Name="EditorComentarios"
+                    Placeholder="Escriba aquí"
+                    AutoSize="TextChanges"
+                    HeightRequest="100"
+                    Margin="0,0,0,20" />
+
+            <BoxView HeightRequest="2" Color="Gray" Margin="0,20,0,0"/>
+
+            <Button 
+                    x:Name="BtGUardar"
+                     Text="Guardar nueva Aplicacion"
+                    BackgroundColor="purple"
+                    TextColor="White"
+                    FontSize="Medium"
+                    CornerRadius="20"
+                    HorizontalOptions="FillAndExpand"
+                     VerticalOptions="End"
+                    Margin="0,20,0,0"
+                    Clicked="BtGUardar_Clicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

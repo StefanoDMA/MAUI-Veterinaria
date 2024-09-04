@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FrontEndHealthPets.Paginas.FlyPaginas.Medicamentos"
+             Title="Medicamentos">
+
+    <ContentPage.BackgroundImageSource>
+        <FileImageSource File="fondomedicamento.jpeg" />
+    </ContentPage.BackgroundImageSource>
+
+    <Grid>
+        <ScrollView>
+            <StackLayout Padding="20" VerticalOptions="CenterAndExpand" Spacing="10">
+                <Label Text="Medicamentos"
+                       FontSize="Medium"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       TextColor="White"
+                       Margin="0,-10,0,0" />
+
+                <Button 
+                    x:Name="BtGuardarMedicamento"
+                    Text="Agregar nuevo Medicamento"
+                    BackgroundColor="#128ba7"
+                    TextColor="White"
+                    FontSize="Medium"
+                    CornerRadius="20"
+                    HorizontalOptions="Center"
+                    WidthRequest="200"
+                    Margin="0,-5,0,0"
+                    Clicked="BtGuardarMedicamento_Clicked"/>
+
+                <Button 
+                     x:Name="BtRecetarMedicamento"
+                     Text="Recetar Medicamento"
+                     BackgroundColor="#128ba7"
+                     TextColor="White"
+                     FontSize="Medium"
+                     CornerRadius="20"
+                     HorizontalOptions="Center"
+                     WidthRequest="200" 
+                     Margin="0,-5,0,0"
+                     Clicked="BtRecetarMedicamento_Clicked"/>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FrontEndHealthPets.Paginas.Registro"
+             Title="Registro">
+    <ScrollView>
+        <Frame BackgroundColor="White" BorderColor="MediumPurple">
+            <ScrollView>
+                <VerticalStackLayout Spacing="20">
+                    <VerticalStackLayout
+             Padding="10,20"
+             Spacing="10">
+
+                        <Frame BackgroundColor="White" BorderColor="Black">
+                            <Grid>
+                                <Entry x:Name="Nombre" Placeholder="Nombre" Text="" TextColor="Black" VerticalOptions="Center" MaxLength="15"/>
+                            </Grid>
+                        </Frame>
+                        <Frame BackgroundColor="White" BorderColor="MediumPurple">
+                            <Grid>
+                                <Entry x:Name="Apellido" Placeholder="Apellido" Text="" TextColor="Black" VerticalOptions="Center" MaxLength="15"/>
+                            </Grid>
+                        </Frame>
+                        <Frame BackgroundColor="White" BorderColor="MediumPurple">
+                            <Grid>
+                                <Entry x:Name="Email" Placeholder="Correo Electronico" Text="" TextColor="Black" VerticalOptions="Center" MaxLength="50"/>
+                            </Grid>
+                        </Frame>
+                        <Frame BackgroundColor="White" BorderColor="MediumPurple">
+                            <Grid>
+                                <Entry x:Name="Comfirmacion_Email" Placeholder="Confirmar Electronico" Text="" TextColor="Black" VerticalOptions="Center" MaxLength="50"/>
+                            </Grid>
+                        </Frame>
+                        <Frame BackgroundColor="White" BorderColor="MediumPurple">
+                            <Grid>
+                                <Entry x:Name="Password" Placeholder="Password" Text="" TextColor="Black" VerticalOptions="Center" MaxLength="8" IsPassword="True"/>
+                            </Grid>
+                        </Frame>
+                        <Frame BackgroundColor="White" BorderColor="MediumPurple">
+                            <Grid>
+                                <Entry x:Name="Confirmar_Password" Placeholder="Confirmar Password" Text="" TextColor="Black" VerticalOptions="Center" MaxLength="8" IsPassword="True"/>
+                            </Grid>
+                        </Frame>
+                        <Frame BackgroundColor="White" BorderColor="MediumPurple">
+                            <Grid>
+                                <Entry x:Name="NumeroVerificacion" Placeholder="Número de verificación" Text="" TextColor="Black" VerticalOptions="Center" MaxLength="6" Keyboard="Numeric"/>
+                            </Grid>
+                        </Frame>
+                        <Button Margin="0,20,0,0"
+         x:Name="btRegistrar"
+         BackgroundColor="Purple"
+         BorderColor="White"
+         FontAttributes="Bold"
+         FontSize="Medium"
+         Text="Registrarse"
+         Clicked="btRegistrar_Clicked" />
+                        <Button Margin="0,20,0,0"
+                          x:Name="btRegresar"
+                            BackgroundColor="Purple"
+                               BorderColor="White"
+                               FontAttributes="Bold"
+                               FontSize="Medium"
+                               Text="Regresar"
+                               Clicked="btRegresar_Clicked" />
+
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+            </ScrollView>
+        </Frame>
+    </ScrollView>
+</ContentPage>

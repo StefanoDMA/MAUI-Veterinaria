@@ -1,0 +1,60 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FrontEndHealthPets.Paginas.FlyPaginas.DetallesMascotaPage"
+             Title="Detalles de la Mascota">
+    <Grid>
+        <!-- Definir las filas del Grid -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <!-- Imagen -->
+            <RowDefinition Height="Auto" />
+            <!-- Barra de nombre -->
+            <RowDefinition Height="Auto" />
+            <!-- Barra de detalles -->
+        </Grid.RowDefinitions>
+
+        <!-- Imagen de la mascota -->
+        <Image Source="{Binding Mascota.ImageSource}" 
+               Aspect="AspectFill" 
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="FillAndExpand"
+               Grid.Row="0" />
+
+        <!-- Barra con el nombre de la mascota -->
+        <Frame BackgroundColor="#000000CC" 
+               Padding="10" 
+               CornerRadius="10" 
+               Margin="10"
+               HasShadow="False"
+               Grid.Row="1">
+            <Label Text="{Binding Mascota.Name}" 
+                   FontSize="24" 
+                   FontAttributes="Bold" 
+                   HorizontalOptions="Center" 
+                   TextColor="White" />
+        </Frame>
+
+        <!-- Barra con los detalles de la mascota -->
+        <Frame BackgroundColor="White" 
+               Padding="10" 
+               CornerRadius="10" 
+               Margin="10"
+               HasShadow="True"
+               Grid.Row="2">
+            <StackLayout Spacing="10">
+                <Label Text="{Binding Mascota.Raza, StringFormat='Raza: {0}'}" 
+                       FontSize="18" 
+                       HorizontalOptions="Start" 
+                       TextColor="#333"/>
+                <Label Text="{Binding Mascota.Fecha_Nacimiento, StringFormat='Fecha de Nacimiento: {0:dd/MM/yyyy}'}" 
+                       FontSize="18" 
+                       HorizontalOptions="Start" 
+                       TextColor="#333"/>
+                <Label Text="{Binding Mascota.Fecha_Proximo_Baheiro, StringFormat='Fecha de Próximo Baño: {0:dd/MM/yyyy}'}" 
+                       FontSize="18" 
+                       HorizontalOptions="Start" 
+                       TextColor="#333"/>
+            </StackLayout>
+        </Frame>
+    </Grid>
+</ContentPage>

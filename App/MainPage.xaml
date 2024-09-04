@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FrontEndHealthPets.MainPage">
+
+    <ScrollView>
+        <Grid RowDefinitions="*,*">
+            <Image Grid.Row="0" Aspect="AspectFill" Source="imagen_20240730.png"/>
+
+            <Grid Grid.Row="1" Margin="10">
+                <RoundRectangle Margin="-15,-40,-20,-15"
+                 CornerRadius="50,50,0,0"
+                 Fill="White"/>
+
+                <VerticalStackLayout Margin="20" Spacing="10">
+                    <Label FontAttributes="Bold"
+                   FontSize="Large" 
+                   Text="Bienvenido"
+                   TextColor="Black"/>
+                    <Label Text="por que es un placer cuidar de nuestras mascotas"
+                   TextColor="Black"/>
+                    <Grid ColumnDefinitions=".2*,.8*">
+                        <Grid WidthRequest="40" HeightRequest="40">
+                            <RoundRectangle Background="White"
+                                        CornerRadius="10"
+                                        Fill="White" />
+                            <Image Source="iconsmail.png"
+                               Aspect="Fill"
+                               HorizontalOptions="CenterAndExpand"
+                               VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+
+                        <Entry x:Name="Correo" Grid.Column="1" Placeholder="Email" Text="" TextColor="black" VerticalOptions="Center"/>
+                    </Grid>
+
+                    <Grid ColumnDefinitions=".2*,.8*">
+                        <Grid WidthRequest="40" HeightRequest="40">
+                            <RoundRectangle Background="White"
+                                        CornerRadius="10"
+                                        Fill="White" />
+                            <Image Source="icon_password.png"
+                                Aspect="Fill"
+                               HorizontalOptions="CenterAndExpand"
+                               VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                        <Entry x:Name="Passwoord" Grid.Column="1" Placeholder="Password" Text="" TextColor="Black" VerticalOptions="Center"/>
+                    </Grid>
+                    <Button Margin="0,10,0,0"
+                    x:Name="btiniciarsecion"
+                    BackgroundColor="#128ba7"
+                    BorderColor="Black"
+                    FontAttributes="Bold"
+                    FontSize="Medium"
+                    Text="Iniciar Sesion"
+                    TextColor="White"
+                    Clicked="btiniciarsecion_Clicked"/>
+                    <Button Margin="0,10,0,0"
+                    x:Name="btregistrarse"
+                    BackgroundColor="#128ba7"
+                    BorderColor="Black"
+                    FontAttributes="Bold"
+                    FontSize="Medium"
+                    Text="Registrarse"
+                    TextColor="White"
+                    Clicked="btregistrarse_Clicked"/>
+                    
+                    <Label Margin="0,10,0,0"
+                           x:Name="btrecuperarpassword"
+                           HorizontalOptions="Center"
+                            Text="Olvidaste tu contraseña"
+                             TextColor="Purple"
+                            TextDecorations="Underline">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </VerticalStackLayout>
+            </Grid>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FrontEndHealthPets.Paginas.PaginaFlyMenu"
+             xmlns:local="clr-namespace:FrontEndHealthPets.Paginas.FlyPaginas"
+             xmlns:loca1="clr-namespace:FrontEndHealthPets.Datos"
+             xmlns:local1="clr-namespace:FrontEndHealthPets.Paginas.tabpage"
+             Title="PaginaFlyMenu"
+             Padding="0,40,0,0"
+             IconImageSource="hanburguer.png">
+
+    <!-- Fondo degradado de morado a azul -->
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#66335e" Offset="0.0" />
+            <!-- Morado (BlueViolet) -->
+            <GradientStop Color="#128ba6" Offset="1.0" />
+            <!-- Azul (DeepSkyBlue) -->
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <CollectionView x:Name="collectionView"
+                    x:FieldModifier="public"
+                    SelectionMode="Single">
+        <CollectionView.ItemsSource>
+            <x:Array Type="{x:Type loca1:Pagina_Flyout_Items}">
+                <loca1:Pagina_Flyout_Items Titulo="Busqueda de Mascotas"
+                                            Icono="tarjeta.png"
+                                            TargetType="{x:Type local:RazasAnimales}" />
+
+                <loca1:Pagina_Flyout_Items Titulo="Perfil Usuario"
+                                            Icono="editar_perfil.png"
+                                            TargetType="{x:Type local:perfilu}" />
+
+                <loca1:Pagina_Flyout_Items Titulo="Mis Mascotas"
+                                            Icono="mascotas.png"
+                                            TargetType="{x:Type local:MisMascotas}" />
+
+                <loca1:Pagina_Flyout_Items Titulo="Baños"
+                                            Icono="banos.png"
+                                            TargetType="{x:Type local:Baheiros}" />
+
+                <loca1:Pagina_Flyout_Items Titulo="Clinica Veterinaria"
+                                            Icono="clinica.png"
+                                            TargetType="{x:Type local:ClinicaVeterinaria}" />
+
+                <loca1:Pagina_Flyout_Items Titulo="Medicamentos"
+                                            Icono="medicamentos.png"
+                                            TargetType="{x:Type local:Medicamentos}" />
+
+                <loca1:Pagina_Flyout_Items Titulo="Vacunas"
+                                            Icono="inyeccion.png"
+                                            TargetType="{x:Type local:VacunasPage}" />
+
+                <loca1:Pagina_Flyout_Items Titulo="Consultas"
+                                            Icono="veterinary.png"
+                                            TargetType="{x:Type local1:Consultas_Principal}" />
+            </x:Array>
+        </CollectionView.ItemsSource>
+
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Grid Padding="5,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image Source="{Binding Icono}" />
+                    <Label Grid.Column="1"
+                           Margin="20,0"
+                           Text="{Binding Titulo}"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           VerticalOptions="Center"
+                           TextColor="White" />
+                    <!-- Color del texto en blanco -->
+                </Grid>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>
