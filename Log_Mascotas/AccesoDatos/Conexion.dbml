@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="App_Mi_Mascota" Class="ConexionDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-2490RMR;Initial Catalog=App_Mi_Mascota;Integrated Security=True;Encrypt=True;Trust Server Certificate=True" SettingsObjectName="Log_Mascotas.Properties.Settings" SettingsPropertyName="App_Mi_MascotaConnectionString3" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.SP_ACTIVAR_USUARIO" Method="SP_ACTIVAR_USUARIO">
+    <Parameter Name="CORREO_ELECTRONICO" Parameter="cORREO_ELECTRONICO" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="NUMEROVERIFICACION" Parameter="nUMEROVERIFICACION" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="IDRETURN" Parameter="iDRETURN" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ERRORID" Parameter="eRRORID" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ERRORDESCRIPCION" Parameter="eRRORDESCRIPCION" Type="System.String" DbType="NVarChar(MAX)" Direction="InOut" />
+    <Parameter Name="FILASACTUALIZADAS" Parameter="fILASACTUALIZADAS" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_ACTUALIZAR_USUARIO" Method="SP_ACTUALIZAR_USUARIO">
+    <Parameter Name="ID_USUARIO" Parameter="iD_USUARIO" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NOMBRE" Parameter="nOMBRE" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="APELLIDOS" Parameter="aPELLIDOS" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="CORREO_ELECTRONICO" Parameter="cORREO_ELECTRONICO" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="CONFIRMACION_DE_CORREO_ELECTRONICO" Parameter="cONFIRMACION_DE_CORREO_ELECTRONICO" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="PASSWORD" Parameter="pASSWORD" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="CONFIRMACION_PASSWORD" Parameter="cONFIRMACION_PASSWORD" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="idReturn" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="idError" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="errorDescripcion" Type="System.String" DbType="NVarChar(200)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_AGREGAR_BAHEIRO" Method="SP_AGREGAR_BAHEIRO">
+    <Parameter Name="TIPO_DE_BAHEIRO" Parameter="tIPO_DE_BAHEIRO" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="DESCRIPCION" Parameter="dESCRIPCION" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="IDRETURN" Parameter="iDRETURN" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ERRORID" Parameter="eRRORID" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ERRORDESCRIPCION" Parameter="eRRORDESCRIPCION" Type="System.String" DbType="NVarChar(MAX)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_BAHEIROS_MASCOTAS" Method="SP_BAHEIROS_MASCOTAS">
+    <Parameter Name="ID_MASCOTA" Parameter="iD_MASCOTA" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ID_BAHEIRO" Parameter="iD_BAHEIRO" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FECHA_Y_HORA_BAHEIRO" Parameter="fECHA_Y_HORA_BAHEIRO" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FECHA_Y_HORA_PROXIMO_BAHEIRO" Parameter="fECHA_Y_HORA_PROXIMO_BAHEIRO" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="NOTAS" Parameter="nOTAS" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="IDRETURN" Parameter="iDRETURN" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ERRORID" Parameter="eRRORID" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ERRORDESCRIPCION" Parameter="eRRORDESCRIPCION" Type="System.String" DbType="NVarChar(MAX)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_CITAS__CLINICA_VETERINARIA_MASCOTAS" Method="SP_CITAS__CLINICA_VETERINARIA_MASCOTAS">
+    <Parameter Name="ID_MASCOTA" Parameter="iD_MASCOTA" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ID_CLINICA_VETERINARIA" Parameter="iD_CLINICA_VETERINARIA" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ID_DOCTOR" Parameter="iD_DOCTOR" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FECHA_Y_HORA" Parameter="fECHA_Y_HORA" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="DESCRIPCION" Parameter="dESCRIPCION" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="NOTAS" Parameter="nOTAS" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="RESULTADO" Parameter="rESULTADO" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ID_ERROR" Parameter="iD_ERROR" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ERROR_DESCRIPCION" Parameter="eRROR_DESCRIPCION" Type="System.String" DbType="VarChar(200)" Direction="InOut" />
+    <ElementType Name="SP_CITAS__CLINICA_VETERINARIA_MASCOTASResult">
+      <Column Name="Resultado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IdError" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ErrorDescripcion" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_CLINICA_VETERINARIA" Method="SP_CLINICA_VETERINARIA">
+    <Parameter Name="NOMBRE_CLINICA_VETERINARIA" Parameter="nOMBRE_CLINICA_VETERINARIA" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="ID_DOCTOR" Parameter="iD_DOCTOR" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DIRECCION" Parameter="dIRECCION" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="TELEFONO" Parameter="tELEFONO" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="IDRETURN" Parameter="iDRETURN" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ID_ERROR" Parameter="iD_ERROR" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ERROR_DESCRIPCION" Parameter="eRROR_DESCRIPCION" Type="System.String" DbType="VarChar(200)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_ELIMINAR_USUARIO" Method="SP_ELIMINAR_USUARIO">
+    <Parameter Name="idUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="correoElectronico" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="idReturn" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="idError" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="errorDescripcion" Type="System.String" DbType="VarChar(200)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_INGRESAR_DOCTOR" Method="SP_INGRESAR_DOCTOR">
+    <Parameter Name="NOMBRE" Parameter="nOMBRE" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="TELEFONO" Parameter="tELEFONO" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="CORREO_ELECTRONICO" Parameter="cORREO_ELECTRONICO" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="IDRETURN" Parameter="iDRETURN" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ERRORID" Parameter="eRRORID" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ERRORDESCRIPCION" Parameter="eRRORDESCRIPCION" Type="System.String" DbType="NVarChar(MAX)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_INGRESAR_FOTOS" Method="SP_INGRESAR_FOTOS">
+    <Parameter Name="Foto" Parameter="foto" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" />
+    <Parameter Name="Id_Mascota" Parameter="id_Mascota" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Descripcion" Parameter="descripcion" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="IDRETURN" Parameter="iDRETURN" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ERRORID" Parameter="eRRORID" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ERRORDESCRIPCION" Parameter="eRRORDESCRIPCION" Type="System.String" DbType="NVarChar(MAX)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_INGRESAR_MASCOTA" Method="SP_INGRESAR_MASCOTA">
+    <Parameter Name="ID_USUARIO" Parameter="iD_USUARIO" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NOMBRE" Parameter="nOMBRE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ESPECIE" Parameter="eSPECIE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="RAZA" Parameter="rAZA" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FECHA_NACIMIENTO" Parameter="fECHA_NACIMIENTO" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="ID_MASCOTA" Parameter="iD_MASCOTA" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="IDRETURN" Parameter="iDRETURN" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ERRORID" Parameter="eRRORID" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ERRORDESCRIPCION" Parameter="eRRORDESCRIPCION" Type="System.String" DbType="NVarChar(MAX)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_INGRESAR_MASCOTA_MEDICAMENTO" Method="SP_INGRESAR_MASCOTA_MEDICAMENTO">
+    <Parameter Name="ID_MASCOTA" Parameter="iD_MASCOTA" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ID_MEDICAMENTO" Parameter="iD_MEDICAMENTO" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MODO_DE_ADMINISTRACION" Parameter="mODO_DE_ADMINISTRACION" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="FECHA_INICIO" Parameter="fECHA_INICIO" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="FECHA_FIN" Parameter="fECHA_FIN" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="HORA_DE_INGESTA" Parameter="hORA_DE_INGESTA" Type="System.TimeSpan" DbType="Time" />
+    <Parameter Name="NOTAS" Parameter="nOTAS" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="IDRETURN" Parameter="iDRETURN" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ERRORID" Parameter="eRRORID" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ERRORDESCRIPCION" Parameter="eRRORDESCRIPCION" Type="System.String" DbType="NVarChar(MAX)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_INGRESAR_MASCOTAS_VACUNAS" Method="SP_INGRESAR_MASCOTAS_VACUNAS">
+    <Parameter Name="ID_MASCOTA" Parameter="iD_MASCOTA" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ID_VACUNA" Parameter="iD_VACUNA" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DOSIS" Parameter="dOSIS" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FECHA_Y_HORA_APLICACION" Parameter="fECHA_Y_HORA_APLICACION" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FECHA_Y_HORA_PROXIMA_APLICACION" Parameter="fECHA_Y_HORA_PROXIMA_APLICACION" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="COMENTARIOS" Parameter="cOMENTARIOS" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="IDRETURN" Parameter="iDRETURN" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="IDERROR" Parameter="iDERROR" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ERRORDESCRIPCION" Parameter="eRRORDESCRIPCION" Type="System.String" DbType="NVarChar(200)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_INGRESAR_MEDICAMENTO" Method="SP_INGRESAR_MEDICAMENTO">
+    <Parameter Name="NOMBRE" Parameter="nOMBRE" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="CATEGORIA" Parameter="cATEGORIA" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="DESCRIPCION" Parameter="dESCRIPCION" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="FECHA_VENCIMIENTO" Parameter="fECHA_VENCIMIENTO" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="IDRETURN" Parameter="iDRETURN" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ERRORID" Parameter="eRRORID" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ERRORDESCRIPCION" Parameter="eRRORDESCRIPCION" Type="System.String" DbType="NVarChar(MAX)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_INGRESAR_USUARIO" Method="SP_INGRESAR_USUARIO">
+    <Parameter Name="NOMBRE" Parameter="nOMBRE" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="APELLIDOS" Parameter="aPELLIDOS" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CORREO_ELECTRONICO" Parameter="cORREO_ELECTRONICO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="CONFIRMACION_DE_CORREO_ELECTRONICO" Parameter="cONFIRMACION_DE_CORREO_ELECTRONICO" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="PASSWORD" Parameter="pASSWORD" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="CONFIRMACION_PASSWORD" Parameter="cONFIRMACION_PASSWORD" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="NUMERO_VERIFICACION" Parameter="nUMERO_VERIFICACION" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ID_USUARIO" Parameter="iD_USUARIO" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ErrorId" Parameter="errorId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ErrorDescripcion" Parameter="errorDescripcion" Type="System.String" DbType="NVarChar(255)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_INGRESAR_VACUNA" Method="SP_INGRESAR_VACUNA">
+    <Parameter Name="NOMBRE" Parameter="nOMBRE" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="DESCRIPCION" Parameter="dESCRIPCION" Type="System.String" DbType="VarChar(255)" />
+    <Parameter Name="FECHA_VENCIMIENTO" Parameter="fECHA_VENCIMIENTO" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="IDRETURN" Parameter="iDRETURN" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ERRORID" Parameter="eRRORID" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ERRORDESCRIPCION" Parameter="eRRORDESCRIPCION" Type="System.String" DbType="NVarChar(MAX)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_INSERTAR_CLINICA_DOCTOR" Method="SP_INSERTAR_CLINICA_DOCTOR">
+    <Parameter Name="ID_CLINICA_VETERINARIA" Parameter="iD_CLINICA_VETERINARIA" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ID_DOCTOR" Parameter="iD_DOCTOR" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_INSERTAR_RECORDATORIO" Method="SP_INSERTAR_RECORDATORIO">
+    <Parameter Name="ID_MASCOTA" Parameter="iD_MASCOTA" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FECHA" Parameter="fECHA" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="HORA" Parameter="hORA" Type="System.TimeSpan" DbType="Time" />
+    <Parameter Name="DESCRIPCION" Parameter="dESCRIPCION" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="TIPO" Parameter="tIPO" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="NOMBRE" Parameter="nOMBRE" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ID_VACUNA" Parameter="iD_VACUNA" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ID_MEDICAMENTO" Parameter="iD_MEDICAMENTO" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ID_CITA" Parameter="iD_CITA" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ID_BAHEIRO" Parameter="iD_BAHEIRO" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IDRETURN" Parameter="iDRETURN" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="IDERROR" Parameter="iDERROR" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ERRORDESCRIPCION" Parameter="eRRORDESCRIPCION" Type="System.String" DbType="VarChar(200)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_LOGIN" Method="SP_LOGIN">
+    <Parameter Name="CORREO_ELECTRONICO" Parameter="cORREO_ELECTRONICO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PASSWORD" Parameter="pASSWORD" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ID_USUARIO" Parameter="iD_USUARIO" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ESTADO" Parameter="eSTADO" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="NOMBRE" Parameter="nOMBRE" Type="System.String" DbType="NVarChar(50)" Direction="InOut" />
+    <Parameter Name="APELLIDOS" Parameter="aPELLIDOS" Type="System.String" DbType="NVarChar(50)" Direction="InOut" />
+    <Parameter Name="OUT_CORREO_ELECTRONICO" Parameter="oUT_CORREO_ELECTRONICO" Type="System.String" DbType="NVarChar(50)" Direction="InOut" />
+    <Parameter Name="OUT_PASSWORD" Parameter="oUT_PASSWORD" Type="System.String" DbType="NVarChar(64)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_OBTENER_LISTA_BAHEIROS" Method="SP_OBTENER_LISTA_BAHEIROS">
+    <ElementType Name="SP_OBTENER_LISTA_BAHEIROSResult">
+      <Column Name="ID_BAHEIRO" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TIPO_DE_BAHEIRO" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_OBTENER_LISTA_BAHEIROS_MASCOTAS" Method="SP_OBTENER_LISTA_BAHEIROS_MASCOTAS">
+    <Parameter Name="ID_MASCOTA" Parameter="iD_MASCOTA" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SP_OBTENER_LISTA_BAHEIROS_MASCOTASResult">
+      <Column Name="ID_BAHEIROS_MASCOTA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_MASCOTA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NOMBRE_MASCOTA" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_BAHEIRO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NOMBRE_BAHEIRO" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="DESCRIPCION_BAHEIRO" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="FECHA_Y_HORA_BAHEIRO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FECHA_Y_HORA_PROXIMO_BAHEIRO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NOTAS" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_OBTENER_LISTA_CITAS_CLINICA_VETERINARIA" Method="SP_OBTENER_LISTA_CITAS_CLINICA_VETERINARIA">
+    <Parameter Name="ID_MASCOTA" Parameter="iD_MASCOTA" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SP_OBTENER_LISTA_CITAS_CLINICA_VETERINARIAResult">
+      <Column Name="ID_CITA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_MASCOTA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NOMBRE_MASCOTA" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_CLINICA_VETERINARIA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NOMBRE_DE_LA_CLINICA" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_DOCTOR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NOMBRE_DEL_DOCTOR" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DIRECCION_DE_LA_CLINICA" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="TELEFONO" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="FECHA_Y_HORA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="NOTAS" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_OBTENER_LISTA_CLINICAS" Method="SP_OBTENER_LISTA_CLINICAS">
+    <ElementType Name="SP_OBTENER_LISTA_CLINICASResult">
+      <Column Name="ID_CLINICA_VETERINARIA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NOMBRE_CLINICA_VETERINARIA" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="DIRECCION" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="TELEFONO" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_OBTENER_LISTA_DE_DOCTORES_POR_CLINICA" Method="SP_OBTENER_LISTA_DE_DOCTORES_POR_CLINICA">
+    <Parameter Name="ID_CLINICA_VETERINARIA" Parameter="iD_CLINICA_VETERINARIA" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SP_OBTENER_LISTA_DE_DOCTORES_POR_CLINICAResult">
+      <Column Name="ID_CLINICA_VETERINARIA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_DOCTOR" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NOMBRE_DOCTOR" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TELEFONO" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CORREO_ELECTRONICO" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_OBTENER_LISTA_DOCTOR" Method="SP_OBTENER_LISTA_DOCTOR">
+    <Parameter Name="IdDoctor" Parameter="idDoctor" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SP_OBTENER_LISTA_DOCTORResult">
+      <Column Name="ID_DOCTOR" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CORREO_ELECTRONICO" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TELEFONO" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_OBTENER_LISTA_FOTOS_MASCOTAS" Method="SP_OBTENER_LISTA_FOTOS_MASCOTAS">
+    <Parameter Name="Id_Mascota" Parameter="id_Mascota" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SP_OBTENER_LISTA_FOTOS_MASCOTASResult">
+      <Column Name="ID_FOTO" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FOTO" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_OBTENER_LISTA_MASCOTAS" Method="SP_OBTENER_LISTA_MASCOTAS">
+    <Parameter Name="ID_USUARIO" Parameter="iD_USUARIO" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SP_OBTENER_LISTA_MASCOTASResult">
+      <Column Name="ID_MASCOTA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_USUARIO" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ESPECIE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RAZA" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FECHA_NACIMIENTO" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="FECHA_Y_HORA_DE_REGISTRO" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FECHA_Y_HORA_PROXIMO_BAHEIRO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_OBTENER_LISTA_MEDICAMENTOS" Method="SP_OBTENER_LISTA_MEDICAMENTOS">
+    <ElementType Name="SP_OBTENER_LISTA_MEDICAMENTOSResult">
+      <Column Name="ID_MEDICAMENTO" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CATEGORIA" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="FECHA_VENCIMIENTO" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_OBTENER_LISTA_MEDICAMENTOS_MASCOTAS" Method="SP_OBTENER_LISTA_MEDICAMENTOS_MASCOTAS">
+    <Parameter Name="Id_Mascota" Parameter="id_Mascota" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SP_OBTENER_LISTA_MEDICAMENTOS_MASCOTASResult">
+      <Column Name="ID_MASCOTA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NOMBRE_MASCOTA" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_MEDICAMENTO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NOMBRE_MEDICAMENTO" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CATEGORIA" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MODO_DE_ADMINISTRACION" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="HORA_DE_INGESTA" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="FECHA_INICIO" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="FECHA_FIN" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="NOTAS" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_OBTENER_LISTA_VACUNAS" Method="SP_OBTENER_LISTA_VACUNAS">
+    <ElementType Name="SP_OBTENER_LISTA_VACUNASResult">
+      <Column Name="ID_VACUNA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="FECHA_VENCIMIENTO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_OBTENER_LISTA_VACUNAS_MASCOTAS" Method="SP_OBTENER_LISTA_VACUNAS_MASCOTAS">
+    <Parameter Name="ID_MASCOTA" Parameter="iD_MASCOTA" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SP_OBTENER_LISTA_VACUNAS_MASCOTASResult">
+      <Column Name="IDMASCOTAVACUNA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDMASCOTA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NOMBRE_MASCOTA" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IDVACUNA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DOSIS" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NOMBRE_VACUNA" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DESCRIPCION_VACUNA" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="VACUNA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FECHA_Y_HORA_PROXIMAAPLICACION" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="COMENTARIOS" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_RESTABLECER_PASSWORD" Method="SP_RESTABLECER_PASSWORD">
+    <Parameter Name="CORREO_ELECTRONICO" Parameter="cORREO_ELECTRONICO" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="NUEVO_PASSWORD" Parameter="nUEVO_PASSWORD" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="CONFIRMAR_PASSWORD" Parameter="cONFIRMAR_PASSWORD" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

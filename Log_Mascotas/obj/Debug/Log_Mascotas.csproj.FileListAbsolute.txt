@@ -1,0 +1,100 @@
+C:\Users\Alberto\Desktop\AppMascotas\Log_Mascotas\bin\Debug\Log_Mascotas.exe.config
+C:\Users\Alberto\Desktop\AppMascotas\Log_Mascotas\bin\Debug\Log_Mascotas.exe
+C:\Users\Alberto\Desktop\AppMascotas\Log_Mascotas\bin\Debug\Log_Mascotas.pdb
+C:\Users\Alberto\Desktop\AppMascotas\Log_Mascotas\obj\Debug\Log_Mascotas.csproj.AssemblyReference.cache
+C:\Users\Alberto\Desktop\AppMascotas\Log_Mascotas\obj\Debug\Log_Mascotas.csproj.CoreCompileInputs.cache
+C:\Users\Alberto\Desktop\AppMascotas\Log_Mascotas\obj\Debug\Log_Mascotas.exe
+C:\Users\Alberto\Desktop\AppMascotas\Log_Mascotas\obj\Debug\Log_Mascotas.pdb
+C:\Users\Alberto\Desktop\AppMascotas\Log_Mascotas\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Alberto\Desktop\AppMascotas\Log_Mascotas\bin\Debug\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Alberto\Desktop\AppMascotas\Log_Mascotas\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Alberto\Desktop\AppMascotas\Log_Mascotas\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\Alberto\Desktop\AppMascotas\Log_Mascotas\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Alberto\Desktop\AppMascotas\Log_Mascotas\bin\Debug\System.Buffers.dll
+C:\Users\Alberto\Desktop\AppMascotas\Log_Mascotas\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Alberto\Desktop\AppMascotas\Log_Mascotas\bin\Debug\System.Memory.dll
+C:\Users\Alberto\Desktop\AppMascotas\Log_Mascotas\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Alberto\Desktop\AppMascotas\Log_Mascotas\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Alberto\Desktop\AppMascotas\Log_Mascotas\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\Alberto\Desktop\AppMascotas\Log_Mascotas\bin\Debug\System.Text.Json.dll
+C:\Users\Alberto\Desktop\AppMascotas\Log_Mascotas\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Alberto\Desktop\AppMascotas\Log_Mascotas\bin\Debug\System.ValueTuple.dll
+C:\Users\Alberto\Desktop\AppMascotas\Log_Mascotas\obj\Debug\Log_Mascotas.csproj.SuggestedBindingRedirects.cache
+C:\Users\Alberto\Desktop\AppMascotas\Log_Mascotas\obj\Debug\Log_Mascotas.exe.config
+C:\Users\Alberto\Desktop\AppMascotas\Log_Mascotas\obj\Debug\Log_Masc.2F51BDE3.Up2Date
+C:\Users\Alberto\Desktop\AppMascotas\Log_Mascotas\bin\Debug\Newtonsoft.Json.dll
+C:\Users\betom\OneDrive\Escritorio\App mascotas\Log_Mascotas\bin\Debug\Log_Mascotas.exe.config
+C:\Users\betom\OneDrive\Escritorio\App mascotas\Log_Mascotas\bin\Debug\Log_Mascotas.exe
+C:\Users\betom\OneDrive\Escritorio\App mascotas\Log_Mascotas\bin\Debug\Log_Mascotas.pdb
+C:\Users\betom\OneDrive\Escritorio\App mascotas\Log_Mascotas\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\betom\OneDrive\Escritorio\App mascotas\Log_Mascotas\bin\Debug\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\betom\OneDrive\Escritorio\App mascotas\Log_Mascotas\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\betom\OneDrive\Escritorio\App mascotas\Log_Mascotas\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\betom\OneDrive\Escritorio\App mascotas\Log_Mascotas\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\betom\OneDrive\Escritorio\App mascotas\Log_Mascotas\bin\Debug\Newtonsoft.Json.dll
+C:\Users\betom\OneDrive\Escritorio\App mascotas\Log_Mascotas\bin\Debug\System.Buffers.dll
+C:\Users\betom\OneDrive\Escritorio\App mascotas\Log_Mascotas\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\betom\OneDrive\Escritorio\App mascotas\Log_Mascotas\bin\Debug\System.Memory.dll
+C:\Users\betom\OneDrive\Escritorio\App mascotas\Log_Mascotas\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\betom\OneDrive\Escritorio\App mascotas\Log_Mascotas\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\betom\OneDrive\Escritorio\App mascotas\Log_Mascotas\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\betom\OneDrive\Escritorio\App mascotas\Log_Mascotas\bin\Debug\System.Text.Json.dll
+C:\Users\betom\OneDrive\Escritorio\App mascotas\Log_Mascotas\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\betom\OneDrive\Escritorio\App mascotas\Log_Mascotas\bin\Debug\System.ValueTuple.dll
+C:\Users\betom\OneDrive\Escritorio\App mascotas\Log_Mascotas\obj\Debug\Log_Mascotas.csproj.AssemblyReference.cache
+C:\Users\betom\OneDrive\Escritorio\App mascotas\Log_Mascotas\obj\Debug\Log_Mascotas.csproj.SuggestedBindingRedirects.cache
+C:\Users\betom\OneDrive\Escritorio\App mascotas\Log_Mascotas\obj\Debug\Log_Mascotas.exe.config
+C:\Users\betom\OneDrive\Escritorio\App mascotas\Log_Mascotas\obj\Debug\Log_Mascotas.csproj.CoreCompileInputs.cache
+C:\Users\betom\OneDrive\Escritorio\App mascotas\Log_Mascotas\obj\Debug\Log_Masc.2F51BDE3.Up2Date
+C:\Users\betom\OneDrive\Escritorio\App mascotas\Log_Mascotas\obj\Debug\Log_Mascotas.exe
+C:\Users\betom\OneDrive\Escritorio\App mascotas\Log_Mascotas\obj\Debug\Log_Mascotas.pdb
+C:\Users\Alberto\Desktop\Proyecto base y logica final\Log_Mascotas\obj\Debug\Log_Mascotas.csproj.AssemblyReference.cache
+C:\Users\Alberto\Desktop\Proyecto base y logica final\Log_Mascotas\obj\Debug\Log_Mascotas.csproj.SuggestedBindingRedirects.cache
+C:\Users\Alberto\Desktop\Proyecto base y logica final\Log_Mascotas\obj\Debug\Log_Mascotas.exe.config
+C:\Users\Alberto\Desktop\Proyecto base y logica final\Log_Mascotas\obj\Debug\Log_Mascotas.csproj.CoreCompileInputs.cache
+C:\Users\Alberto\Desktop\Proyecto base y logica final\Log_Mascotas\obj\Debug\Log_Mascotas.exe
+C:\Users\Alberto\Desktop\Proyecto base y logica final\Log_Mascotas\obj\Debug\Log_Mascotas.pdb
+C:\Users\Alberto\Desktop\Proyecto base y logica final\Log_Mascotas\bin\Debug\Log_Mascotas.exe.config
+C:\Users\Alberto\Desktop\Proyecto base y logica final\Log_Mascotas\bin\Debug\Log_Mascotas.exe
+C:\Users\Alberto\Desktop\Proyecto base y logica final\Log_Mascotas\bin\Debug\Log_Mascotas.pdb
+C:\Users\Alberto\Desktop\Proyecto base y logica final\Log_Mascotas\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Alberto\Desktop\Proyecto base y logica final\Log_Mascotas\bin\Debug\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Alberto\Desktop\Proyecto base y logica final\Log_Mascotas\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Alberto\Desktop\Proyecto base y logica final\Log_Mascotas\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\Alberto\Desktop\Proyecto base y logica final\Log_Mascotas\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Alberto\Desktop\Proyecto base y logica final\Log_Mascotas\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Alberto\Desktop\Proyecto base y logica final\Log_Mascotas\bin\Debug\System.Buffers.dll
+C:\Users\Alberto\Desktop\Proyecto base y logica final\Log_Mascotas\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Alberto\Desktop\Proyecto base y logica final\Log_Mascotas\bin\Debug\System.Memory.dll
+C:\Users\Alberto\Desktop\Proyecto base y logica final\Log_Mascotas\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Alberto\Desktop\Proyecto base y logica final\Log_Mascotas\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Alberto\Desktop\Proyecto base y logica final\Log_Mascotas\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\Alberto\Desktop\Proyecto base y logica final\Log_Mascotas\bin\Debug\System.Text.Json.dll
+C:\Users\Alberto\Desktop\Proyecto base y logica final\Log_Mascotas\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Alberto\Desktop\Proyecto base y logica final\Log_Mascotas\bin\Debug\System.ValueTuple.dll
+C:\Users\Alberto\Desktop\Proyecto base y logica final\Log_Mascotas\obj\Debug\Log_Masc.2F51BDE3.Up2Date
+C:\Users\Stefano\Desktop\PrograMovil\Log_Mascotas\bin\Debug\Log_Mascotas.exe.config
+C:\Users\Stefano\Desktop\PrograMovil\Log_Mascotas\bin\Debug\Log_Mascotas.exe
+C:\Users\Stefano\Desktop\PrograMovil\Log_Mascotas\bin\Debug\Log_Mascotas.pdb
+C:\Users\Stefano\Desktop\PrograMovil\Log_Mascotas\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Stefano\Desktop\PrograMovil\Log_Mascotas\bin\Debug\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Stefano\Desktop\PrograMovil\Log_Mascotas\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Stefano\Desktop\PrograMovil\Log_Mascotas\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\Stefano\Desktop\PrograMovil\Log_Mascotas\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Stefano\Desktop\PrograMovil\Log_Mascotas\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Stefano\Desktop\PrograMovil\Log_Mascotas\bin\Debug\System.Buffers.dll
+C:\Users\Stefano\Desktop\PrograMovil\Log_Mascotas\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Stefano\Desktop\PrograMovil\Log_Mascotas\bin\Debug\System.Memory.dll
+C:\Users\Stefano\Desktop\PrograMovil\Log_Mascotas\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Stefano\Desktop\PrograMovil\Log_Mascotas\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Stefano\Desktop\PrograMovil\Log_Mascotas\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\Stefano\Desktop\PrograMovil\Log_Mascotas\bin\Debug\System.Text.Json.dll
+C:\Users\Stefano\Desktop\PrograMovil\Log_Mascotas\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Stefano\Desktop\PrograMovil\Log_Mascotas\bin\Debug\System.ValueTuple.dll
+C:\Users\Stefano\Desktop\PrograMovil\Log_Mascotas\obj\Debug\Log_Mascotas.csproj.AssemblyReference.cache
+C:\Users\Stefano\Desktop\PrograMovil\Log_Mascotas\obj\Debug\Log_Mascotas.csproj.SuggestedBindingRedirects.cache
+C:\Users\Stefano\Desktop\PrograMovil\Log_Mascotas\obj\Debug\Log_Mascotas.exe.config
+C:\Users\Stefano\Desktop\PrograMovil\Log_Mascotas\obj\Debug\Log_Mascotas.csproj.CoreCompileInputs.cache
+C:\Users\Stefano\Desktop\PrograMovil\Log_Mascotas\obj\Debug\Log_Masc.2F51BDE3.Up2Date
+C:\Users\Stefano\Desktop\PrograMovil\Log_Mascotas\obj\Debug\Log_Mascotas.exe
+C:\Users\Stefano\Desktop\PrograMovil\Log_Mascotas\obj\Debug\Log_Mascotas.pdb

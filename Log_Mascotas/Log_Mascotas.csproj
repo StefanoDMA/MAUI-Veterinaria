@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{09E749A8-4C6A-43F7-AD2D-CAC68E6E7266}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Log_Mascotas</RootNamespace>
+    <AssemblyName>Log_Mascotas</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccesoDatos\Conexion.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Conexion.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\entitys\Baheiro.cs" />
+    <Compile Include="Entidades\entitys\BaheiroMascotas.cs" />
+    <Compile Include="Entidades\entitys\Citas_Clinica_Veterinaria_Mascotas.cs" />
+    <Compile Include="Entidades\entitys\Clinica_Veterinaria.cs" />
+    <Compile Include="Entidades\entitys\Doctor.cs" />
+    <Compile Include="Entidades\entitys\eliminar_usuario.cs" />
+    <Compile Include="Entidades\entitys\FotosMascota.cs" />
+    <Compile Include="Entidades\entitys\Login.cs" />
+    <Compile Include="Entidades\entitys\Medicamentos.cs" />
+    <Compile Include="Entidades\entitys\MedicamentosMascotas.cs" />
+    <Compile Include="Entidades\entitys\ObtenerFotosResult.cs" />
+    <Compile Include="Entidades\entitys\Recordatorios.cs" />
+    <Compile Include="Entidades\entitys\RecuperarPassword.cs" />
+    <Compile Include="Entidades\entitys\Registro_Usuario.cs" />
+    <Compile Include="Entidades\entitys\Registro_Mascota.cs" />
+    <Compile Include="Entidades\entitys\Vacunas.cs" />
+    <Compile Include="Entidades\entitys\Vacunas_Mascotas.cs" />
+    <Compile Include="Entidades\Request\Req_Actualizar_Usuario.cs" />
+    <Compile Include="Entidades\Request\Req_AgregarDoctor.cs" />
+    <Compile Include="Entidades\Request\Req_Baheiro.cs" />
+    <Compile Include="Entidades\Request\Req_Baherio_Mascotas.cs" />
+    <Compile Include="Entidades\Request\Req_Citas_Clinica_Veterinaria_Mascotas.cs" />
+    <Compile Include="Entidades\Request\Req_Clinica_Veterinaria.cs" />
+    <Compile Include="Entidades\Request\Req_EliminarUsuario.cs" />
+    <Compile Include="Entidades\Request\Req_FotosMascota.cs" />
+    <Compile Include="Entidades\Request\Req_Ingresar_Recordatorio.cs" />
+    <Compile Include="Entidades\Request\Req_ListaBaheriossMascotas.cs" />
+    <Compile Include="Entidades\Request\Req_LIstaMedicamentos.cs" />
+    <Compile Include="Entidades\Request\Req_lista_Baheiros.cs" />
+    <Compile Include="Entidades\Request\Req_Lista_Citas_Veterinaria_mascotas.cs" />
+    <Compile Include="Entidades\Request\Req_Lista_Clinica_Veterinaria.cs" />
+    <Compile Include="Entidades\Request\Req_Lista_Doctor.cs" />
+    <Compile Include="Entidades\Request\Req_Lista_Doctores.cs" />
+    <Compile Include="Entidades\Request\Req_Lista_mascotas.cs" />
+    <Compile Include="Entidades\Request\Req_Lista_Medicamentos_Mascotas.cs" />
+    <Compile Include="Entidades\Request\Req_lista_Vacunas.cs" />
+    <Compile Include="Entidades\Request\Req_Lista_vacunas_Mascotas.cs" />
+    <Compile Include="Entidades\Request\Req_Login.cs" />
+    <Compile Include="Entidades\Request\Req_Mascota.cs" />
+    <Compile Include="Entidades\Request\Req_Medicamentos.cs" />
+    <Compile Include="Entidades\Request\Req_MedicamentosMascotas.cs" />
+    <Compile Include="Entidades\Request\Req_ObtenerBreeds.cs" />
+    <Compile Include="Entidades\Request\Req_ObtenerImages.cs" />
+    <Compile Include="Entidades\Request\Req_RecuperarPassword.cs" />
+    <Compile Include="Entidades\Request\Req_Usuario.cs" />
+    <Compile Include="Entidades\Request\Req_Vacunas.cs" />
+    <Compile Include="Entidades\Request\Req_Vacunas_Mascotas.cs" />
+    <Compile Include="Entidades\response\ResBase.cs" />
+    <Compile Include="Entidades\response\Res_Actualizar_Usuario.cs" />
+    <Compile Include="Entidades\response\Res_LIstaMedicamentos.cs" />
+    <Compile Include="Entidades\response\Res_Lista_Baheiros.cs" />
+    <Compile Include="Entidades\response\Res_Lista_Clinica_Veterinaria.cs" />
+    <Compile Include="Entidades\response\Res_Lista_de_Doctores_Clinica.cs" />
+    <Compile Include="Entidades\response\Res_Lista_Doctor.cs" />
+    <Compile Include="Entidades\response\Res_Lista_Doctores.cs" />
+    <Compile Include="Entidades\response\Res_Lista_Fotos.cs" />
+    <Compile Include="Entidades\response\Res_Lista_mascotas.cs" />
+    <Compile Include="Entidades\response\Res_Lista_Vascunas.cs" />
+    <Compile Include="Entidades\response\Res_Login.cs" />
+    <Compile Include="Entidades\response\Res_Usuario.cs" />
+    <Compile Include="Entidades\response\Res_AgregarDoctor.cs" />
+    <Compile Include="Entidades\response\Res_Baheiro.cs" />
+    <Compile Include="Entidades\response\Res_Baheiro_Mascotas.cs" />
+    <Compile Include="Entidades\response\Res_Citas_Clinica_Veterinaria_Mascotas.cs" />
+    <Compile Include="Entidades\response\Res_Clinica_Veterinaria.cs" />
+    <Compile Include="Entidades\response\Res_EliminarUsuario.cs" />
+    <Compile Include="Entidades\response\Res_FotosMascotas.cs" />
+    <Compile Include="Entidades\response\Res_Ingresar_recordatorio.cs" />
+    <Compile Include="Entidades\response\Res_ListaBaheiros_Mascotas.cs" />
+    <Compile Include="Entidades\response\Res_Lista_Citas_Veterinaria_mascotas.cs" />
+    <Compile Include="Entidades\response\Res_Lista_Medicamentos_Mascotas.cs" />
+    <Compile Include="Entidades\response\Res_Lista_Vacunas_Mascotas.cs" />
+    <Compile Include="Entidades\response\Res_Mascota.cs" />
+    <Compile Include="Entidades\response\Res_Medicamentos.cs" />
+    <Compile Include="Entidades\response\Res_MedicamentosMascotas.cs" />
+    <Compile Include="Entidades\response\Res_ObtenerBreeds.cs" />
+    <Compile Include="Entidades\response\Res_ObtenerImages.cs" />
+    <Compile Include="Entidades\response\Res_RecuperarPassword.cs" />
+    <Compile Include="Entidades\response\Res_Vacuna.cs" />
+    <Compile Include="Entidades\response\Res_Vacunas_Mascotas.cs" />
+    <Compile Include="Logica\LogLogin.cs" />
+    <Compile Include="Logica\LogRegistroUsuarios.cs" />
+    <Compile Include="Logica\Log_Actualizar_Usuario.cs" />
+    <Compile Include="Logica\Log_AgregarDoctor.cs" />
+    <Compile Include="Logica\Log_Agregar_Citas_Clinica_Veterinaria_Mascotas.cs" />
+    <Compile Include="Logica\Log_Agregar_Medicamentos.cs" />
+    <Compile Include="Logica\Log_Agregar_Vacuna.cs" />
+    <Compile Include="Logica\Log_Baheiro.cs" />
+    <Compile Include="Logica\Log_Baheiro_Mascotas.cs" />
+    <Compile Include="Logica\Log_Clinica_Veterinaria.cs" />
+    <Compile Include="Logica\Log_DogApiService.cs" />
+    <Compile Include="Logica\Log_EliminarUsuario.cs" />
+    <Compile Include="Logica\Log_FotosMascotas.cs" />
+    <Compile Include="Logica\Log_Ingresar_Recordatorio.cs" />
+    <Compile Include="Logica\Log_Ingresar_Vacunas_Mascotas.cs" />
+    <Compile Include="Logica\Log_Lista_de _Doctores_Por_Clinica.cs" />
+    <Compile Include="Logica\Log_Lista_Doctores.cs" />
+    <Compile Include="Logica\Log_MedicamentosMascotas.cs" />
+    <Compile Include="Logica\Log_RecuperarPassword.cs" />
+    <Compile Include="Logica\Log_RegistrarMascota.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="servicios\DogApiService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AccesoDatos\Conexion.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Conexion.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AccesoDatos\Conexion.dbml.layout">
+      <DependentUpon>Conexion.dbml</DependentUpon>
+    </None>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt">
+      <Version>8.0.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

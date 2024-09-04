@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Log_Mascotas", "Log_Mascotas.csproj", "{09E749A8-4C6A-43F7-AD2D-CAC68E6E7266}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api_Mascotas", "..\Api_Mascotas\Api_Mascotas.csproj", "{F2B89890-6CEF-4B06-A227-8549BF75884B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09E749A8-4C6A-43F7-AD2D-CAC68E6E7266}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09E749A8-4C6A-43F7-AD2D-CAC68E6E7266}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09E749A8-4C6A-43F7-AD2D-CAC68E6E7266}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09E749A8-4C6A-43F7-AD2D-CAC68E6E7266}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2B89890-6CEF-4B06-A227-8549BF75884B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2B89890-6CEF-4B06-A227-8549BF75884B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2B89890-6CEF-4B06-A227-8549BF75884B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2B89890-6CEF-4B06-A227-8549BF75884B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E1D7CAFC-329A-4B44-858E-3A42C4952CC2}
+	EndGlobalSection
+EndGlobal
